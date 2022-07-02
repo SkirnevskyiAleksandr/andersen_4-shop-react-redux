@@ -1,0 +1,79 @@
+.mainWrapper{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:90%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper{
+    width:90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+}
+.imgWrapper{
+    width: 70%;
+    border-radius: 10px;
+    box-shadow: rgb(0 0 0 / 49%) 0px 0px 5px 0px;
+    overflow: hidden;
+}
+
+.textWrapper{
+    width: 30%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+p{
+    text-align:justify;
+}
+
+.price {
+    color: rgb(29, 240, 29);
+}
+
+.priceDown{
+    display:flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.priceWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+button {
+    width: 40px;
+    height: 40px;
+    border: solid rgb(172, 169, 169) 1px;
+    border-radius: 5px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.btnWrapper{
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+}
+
+.btnWrapper button{
+    width: 20px;
+    height: 20px;
+}
