@@ -7,25 +7,9 @@ import Basket from '../../assets/basket.svg';
 import Item from '../Item/Item';
 import { ErrorPage } from '../ErrorPage/ErrorPage';
 import { connect } from "react-redux";
-import { basketItemsSum } from '../../JS/js'
 
 
 const MainWindow = (props) => {
-  const {
-    listItem,
-    currentItem,
-    reTurnItem,
-    returnBasketListItems,
-    currentBasketListItems,
-    increaseCounter,
-    decreaseCounter,
-    counter,
-    toggleIsLoginOpen,
-    toggleIsSignUpOpen,
-    isLogin,
-  } = props;
-
-  const totalCurrentPrice = basketItemsSum(props.basketListItems)
   return (
     <>
       <header>
@@ -41,20 +25,20 @@ const MainWindow = (props) => {
               Log in
             </button>
             <button
-              onClick={props.toggleLoginModal}
+              onClick={props.toggleSignUpModal}
               className={`${mainWindowStyles.online_shop_nav} ${mainWindowStyles.btn}`}
             >
-              {!isLogin ? 'Sign up' : 'Sign out'}
+              {!props.isLogin ? 'Sign up' : 'Sign out'}
             </button>
           </div>
-          {!isLogin ? (
+          {props.isLogin ? (
             <div>
               <button className={mainWindowStyles.basketWrapper}>
                 <img src={Basket} alt="basket" />
               </button>
-              <div className={mainWindowStyles.items} mainWindowStyles>
+              <div className={mainWindowStyles.items}>
                 items:{props.basketListItems.length}/sum:
-                {totalCurrentPrice}$
+                {props.totalPrice}$
               </div>
             </div>
           ) : (
@@ -76,14 +60,7 @@ const MainWindow = (props) => {
           <Route
             path="/item/:id"
             element={
-              <Item
-                currentItem={currentItem}
-                returnBasketListItems={returnBasketListItems}
-                increaseCounter={increaseCounter}
-                decreaseCounter={decreaseCounter}
-                counter={counter}
-                isLogin={isLogin}
-              />
+              <Item />
             }
           />
           <Route path="*" element={<ErrorPage />} />
@@ -98,7 +75,8 @@ function mapStateToProps(state) {
     usersList: state.usersList,
     basketListItems: state.basketListItems,
     currentStuff: state.item,
-    totalPrice: state.totalPrice
+    totalPrice: state.totalPrice,
+    isLogin: state.isLogin
   };
 }
 
@@ -108,6 +86,9 @@ function mapDispatchToProps(dispatch) {
       dispatch({
         type: 'IS_LOG_IN'
       })
+    },
+    toggleSignUpModal: (event) => {
+      dispatch({ type: 'IS_SIGN_UP_MODAL' })
     }
   }
 }

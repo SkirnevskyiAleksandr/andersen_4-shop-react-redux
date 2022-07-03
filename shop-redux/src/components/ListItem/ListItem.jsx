@@ -5,17 +5,10 @@ import listItemStyle from './ListItem.module.css';
 import { connect } from "react-redux";
 
 const ListItem = (props) => {
-  const {
-    usersList,
-    reTurnItem,
-    returnBasketListItems,
-    isLogin
-  } = props;
-
   return (
     <>
       {
-        usersList.map((elem) => {
+        props.usersList.map((elem) => {
           return (
             <div key={`${elem.id}${elem.title}`} className={listItemStyle.wrapper}>
               <div><img src={elem.images[0]} alt={elem.title} /></div>
@@ -26,7 +19,7 @@ const ListItem = (props) => {
                     <span> price:</span> <span className={listItemStyle.price}>{elem.price} $</span>
                   </div>
                   {
-                    !isLogin ? <button onClick={props.addSingleStuff} type='button'><img src={basket} alt="add to basket" /></button> :
+                    props.isLogin ? <button onClick={() => { props.addSingleStuff(elem) }} type='button'><img src={basket} alt="add to basket" /></button> :
                       <div> You should Log in to buy smth</div>
                   }
                 </div>
@@ -41,7 +34,8 @@ const ListItem = (props) => {
 
 function mapStateToProps(state) {
   return {
-    usersList: state.usersList
+    usersList: state.usersList,
+    isLogin: state.isLogin
   }
 }
 
@@ -50,8 +44,8 @@ function mapDispatchToProps(dispatch) {
     reTurnItemFun: (item) => {
       dispatch({ type: 'RETURN_ITEM', currentItem: item });
     },
-    addSingleStuff: () => {
-      dispatch({ type: 'ADD_TO_BASKET_SINGLE_STUFF' })
+    addSingleStuff: (item) => {
+      dispatch({ type: 'ADD_TO_BASKET_SINGLE_STUFF', currentItem: item })
     }
   }
 }
