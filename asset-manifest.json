@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/andersen-shop-react/static/css/main.0dbde6f2.css",
+    "main.js": "/andersen-shop-react/static/js/main.a4db03af.js",
+    "static/media/add_to_basket.svg": "/andersen-shop-react/static/media/add_to_basket.2c9c2d7f9595fd8cbd7fb2cbbd2ea7d9.svg",
+    "index.html": "/andersen-shop-react/index.html",
+    "static/media/basket.svg": "/andersen-shop-react/static/media/basket.2470c83972998364d7f89a67ee07a041.svg",
+    "main.0dbde6f2.css.map": "/andersen-shop-react/static/css/main.0dbde6f2.css.map",
+    "main.a4db03af.js.map": "/andersen-shop-react/static/js/main.a4db03af.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0dbde6f2.css",
+    "static/js/main.a4db03af.js"
+  ]
+}
