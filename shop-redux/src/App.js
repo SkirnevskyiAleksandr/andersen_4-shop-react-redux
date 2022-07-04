@@ -1,6 +1,6 @@
+import React from 'react';
 import './App.css';
 import { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import MainWindow from './components/MainWindow/MainWindow';
 import LogIn from './components/LogIn/LogIn';
 import SignUp from './components/SignUp/SignUp';
@@ -9,8 +9,6 @@ import { usersListThunkCreator } from './index'
 
 
 function App(props) {
-  // const navigate = useNavigate();
-
   useEffect(() => {
     props.addUser();
   }, []);

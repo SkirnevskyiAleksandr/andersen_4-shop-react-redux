@@ -32,7 +32,7 @@ export const usersListThunkCreator = () => {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <BrowserRouter>
+  <BrowserRouter >
     {app}
   </BrowserRouter>
 );
