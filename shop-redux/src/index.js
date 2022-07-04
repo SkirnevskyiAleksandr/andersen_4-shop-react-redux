@@ -13,17 +13,6 @@ store.subscribe(() => { console.log(store.getState()) });
 
 const app = <Provider store={store}> <App /> </Provider>;
 
-// useEffect(() => {
-//     const fetchData = async () => {
-//       const result = await fetch('https://api.escuelajs.co/api/v1/products?offset=0&limit=12')
-//         .then(res => res.json());
-
-//       setListItem(result)
-//     };
-
-//     fetchData();
-//   }, [])
-
 
 export const usersListThunkCreator = () => {
   return async function (dispatch) {
@@ -43,7 +32,7 @@ export const usersListThunkCreator = () => {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <BrowserRouter basename="/andersen-shop-react">
+  <BrowserRouter>
     {app}
   </BrowserRouter>
 );
