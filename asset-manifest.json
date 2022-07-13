@@ -1,15 +1,15 @@
 {
-  "files": {
-    "main.css": "/andersen_4-shop-react-redux/static/css/main.0dbde6f2.css",
-    "main.js": "/andersen_4-shop-react-redux/static/js/main.c5bd3c97.js",
-    "static/media/add_to_basket.svg": "/andersen_4-shop-react-redux/static/media/add_to_basket.2c9c2d7f9595fd8cbd7fb2cbbd2ea7d9.svg",
-    "index.html": "/andersen_4-shop-react-redux/index.html",
-    "static/media/basket.svg": "/andersen_4-shop-react-redux/static/media/basket.2470c83972998364d7f89a67ee07a041.svg",
-    "main.0dbde6f2.css.map": "/andersen_4-shop-react-redux/static/css/main.0dbde6f2.css.map",
-    "main.c5bd3c97.js.map": "/andersen_4-shop-react-redux/static/js/main.c5bd3c97.js.map"
-  },
-  "entrypoints": [
-    "static/css/main.0dbde6f2.css",
-    "static/js/main.c5bd3c97.js"
-  ]
+  "main.css": "/andersen_4-shop-react-redux/static/css/main.11891659.chunk.css",
+  "main.js": "/andersen_4-shop-react-redux/static/js/main.087daaf0.chunk.js",
+  "main.js.map": "/andersen_4-shop-react-redux/static/js/main.087daaf0.chunk.js.map",
+  "static/js/1.b205f6a1.chunk.js": "/andersen_4-shop-react-redux/static/js/1.b205f6a1.chunk.js",
+  "static/js/1.b205f6a1.chunk.js.map": "/andersen_4-shop-react-redux/static/js/1.b205f6a1.chunk.js.map",
+  "runtime~main.js": "/andersen_4-shop-react-redux/static/js/runtime~main.9e5649f2.js",
+  "runtime~main.js.map": "/andersen_4-shop-react-redux/static/js/runtime~main.9e5649f2.js.map",
+  "static/media/add_to_basket.svg": "/andersen_4-shop-react-redux/static/media/add_to_basket.28cfc1ac.svg",
+  "static/media/basket.svg": "/andersen_4-shop-react-redux/static/media/basket.bfcc3f68.svg",
+  "static/css/main.11891659.chunk.css.map": "/andersen_4-shop-react-redux/static/css/main.11891659.chunk.css.map",
+  "index.html": "/andersen_4-shop-react-redux/index.html",
+  "precache-manifest.69bac971bf9f06d306dec5de932d6c60.js": "/andersen_4-shop-react-redux/precache-manifest.69bac971bf9f06d306dec5de932d6c60.js",
+  "service-worker.js": "/andersen_4-shop-react-redux/service-worker.js"
 }
