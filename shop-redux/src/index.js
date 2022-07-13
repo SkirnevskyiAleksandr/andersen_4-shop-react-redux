@@ -32,7 +32,7 @@ export const usersListThunkCreator = () => {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <BrowserRouter >
+  <BrowserRouter basename="/andersen_4-shop-react-redux">
     {app}
   </BrowserRouter>
 );
